@@ -1,18 +1,18 @@
  a {
-    color: blue;/* set the text color to blue here */
-    text-decoration: none; /* This means we do not want hyperlinks to be underlined */
+    color: blue;
+    text-decoration: none;
     cursor: pointer;
   }
 
   a:hover {
-    color: red;/* set the text color to red here */
-    text-decoration: none; /* This means we do not want hyperlinks to be underlined */
+    color: red;
+    text-decoration: none; 
   }
 
   body {
-    background-color: beige;/* set the background color here */
-    color: black;/* set the text color to black here */
-    font-family: Arial, Helvetica, sans-serif;/* set the font here */
+    background-color: beige;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
    }
 
   footer {
@@ -20,18 +20,20 @@
     margin-bottom: 2rem;
     text-align: center;
   }
+   header{
+    background-color:#ac5353;
+  }
 
   h1 {
     margin-bottom: 0.5rem;
     margin-top: 3rem;
-     text-align: center;
-
+    
    }
 
   h2 {
     color: #075AAB;
     margin-bottom: 2.5rem;
-    margin-top: 2.5rem;
+    margin-top: 5rem;
     background-color: #fff;
    }
 
@@ -54,50 +56,72 @@
     margin-top: 3rem;
   }
 
-  /* this controls how the bullet points in the resume page looks */
-  ul {
-    display: table;
+  #nav-list {
+  	float:right;
     margin: 0 auto;
-    text-align: left;
     list-style: none;
+
   }
-  li{
+  #nav-list  li{
     display: inline;
-    margin-right: 20px;
+    margin-right: 30px;
   }
-  nav{
-    background-color:#fff; 
-  }
-  header{
-    background-color:#ac5353; 
-  }
-  .image{
-    margin-top: 30px;
-    margin-bottom: 100px;
 
-    text-align: center;
 
+  .main-img{
+  	clear:both;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 100px;
+    float:right;
+    border: 1px solid blue;
   }
   #about{
-    float:left;
-    margin-left: 5em;
-    margin-right: 10em;
+    margin-left: 2em;
+    margin-right:30em;
+    line-height: 25px;
   
- 
   }
   #services{
-    float:right;
-  margin-right: 5em;
+
+  margin-left: 2em;
+    margin-right:30em;
   }
-  #portfolio{
+  #work{
     clear: both;
     text-align: center;
-    padding-top:70px;
+    margin-top:5em;
+  }
+   #follow{
+    clear: both;
+    text-align: center;
+   margin-top:8em;
+  
   }
   #contact{
+  	clear: both;
      text-align: center;
-      padding-top:50px;
+     margin-top:5em;
   }
 .container{
-  margin:10px;
+  margin:0;
+}
+progress{
+	float:right;
+	margin-left: 5%;
+}
+
+.image1{
+	float:left;
+	margin-left:150px;
+}
+.image2{
+	float:left;
+}
+.image3{
+	float:left;
+}
+.image4{
+	float:left;
+
 }
