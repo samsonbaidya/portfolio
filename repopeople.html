@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists of Github users</title>
+    <style media="screen">
+      *{
+          box-sizing: border-box;
+      }
+      body{
+          width:60%;
+          font-family:sans-serif;
+      }
+      #showInfo{
+        content-align:center;
+      }
+      ul{
+
+      }
+      li{
+        list-style:none;
+      }
+      #showme{
+        margin:5%;
+      }
+      #individual{
+        border:2px solid blue;
+        margin:2%;
+        background-color: #ffffe6;
+        padding:20px;
+      }
+      #sub-individual{
+        display: inline-block;
+        background-color: #fff;
+        padding-right:10%;
+        margin-bottom:5%;
+        margin-top:5%;
+      }
+      img{
+        margin:5%;
+        border:2px solid black;
+        margin-bottom:5px;
+      }
+      a:link{
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      a:visited{
+        color:black
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      a:hover, a:active {
+        color: red;
+      }
+      .class-one{
+          padding: 14px 25px;
+          text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lists of Github users</h1>
+    <button id="showInfo">Load Github Users</button> <br>
+    <div id="showme"></div>
+    <script>
+        document.getElementById("showInfo").addEventListener('click', onProcess);
+
+        function onProcess(){
+            var req = new XMLHttpRequest();
+            req.open('GET', 'https://api.github.com/users', true);
+            req.onload = function() {
+                if(req.status==200){
+                  var people = JSON.parse(req.responseText)
+                  var display= '';
+                  for(var i in people){
+                   display +=
+                   '<div id="individual">' +
+                   '<img src="'+people[i].avatar_url+'" width="20%">'+
+                   '<div id="sub-individual"><ul>' +
+                   '<p><li>ID: <span id="class-one">'+people[i].id+'<span></li></p>' +
+                   '<p><li>Login: <span id="class-one">'+people[i].login+'<span></li></p>' +
+                   '<p><li>Repos: <a href="'+people[i].repos_url +'">'+people[i].repos_url +'</a></li></p>'+
+                   '<p><li>URL: <a href="'+people[i].url+'">'+people[i].url+'</a></li></p>' +
+                   '<p><li>Gits: <a href="'+people[i].gists_url+'">'+people[i].gists_url+'</a></li></p>' +
+                   '</ul></div>' +
+                   '</div>';
+                   document.getElementById('showme').innerHTML = display;
+                   }
+
+                }
+
+            }
+            req.send();
+        }
+    </script>
+  </body>
+</html>
