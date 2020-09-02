@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,8 +10,12 @@
       *{
           box-sizing: border-box;
       }
+      header{
+        text-align: center;
+      }
       body{
-          width:75%;
+          margin:5%;
+          width:80%;
           font-family:sans-serif;
       }
       #showInfo{
@@ -67,8 +73,11 @@
     </style>
   </head>
   <body>
-    <h1>Lists of Github users</h1>
-    <button id="showInfo">Load Github Users</button> <br>
+    <header>
+      <h1>Lists of Github users</h1>
+       <h2><button id="showInfo">Load Github Users</button></h2>
+    </header><hr>
+
     <div id="showme"></div>
     <script>
         document.getElementById("showInfo").addEventListener('click', onProcess);
