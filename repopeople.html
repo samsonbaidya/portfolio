@@ -13,18 +13,61 @@
         text-align: center;
         background-color:#ac5353;
       }
+      footer{
+
+        text-align: center;
+        font-size: 1.2vw;
+        padding-bottom: 2em;
+        font-weight: bold;
+      }
+
       h1{
           padding-top:2%;
+          font-size: 2.5vw;
+          word-spacing: 10px;
+          line-height: 20px;
       }
       h2{
         padding-bottom:2%;
         background-color:#fff;
+        line-height: 10px;
       }
+
+      hr {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+      }
+
       button{
+        color:blue;
+        font-size: 1.5vw;
         background-color:#ffb3b3;
         cursor:pointer;
         width:20vw;
+        border:3px solid blue;
+        border-radius: 12px;
+        margin-top: 4px;
       }
+      button:hover{
+        width:15vw;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+      button:active{
+        color:blue;
+        font-size: 1.5vw;
+        background-color:#ffb3b3;
+        cursor:pointer;
+        width:20vw;
+        border:3px solid blue;
+        border-radius: 12px;
+        margin-top: 4px;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    button::after{
+
+    }
       body{
           margin:5%;
           width:80%;
@@ -109,9 +152,9 @@
                    '<div id="sub-individual"><ul>' +
                    '<p><li>ID: <span id="class-one">'+people[i].id+'<span></li></p>' +
                    '<p><li>Login: <span id="class-one">'+people[i].login+'<span></li></p>' +
-                   '<p><li>Repos: <a href="'+people[i].repos_url +'">'+people[i].repos_url +'</a></li></p>'+
-                   '<p><li>URL: <a href="'+people[i].url+'">'+people[i].url+'</a></li></p>' +
-                   '<p><li>Gits: <a href="'+people[i].gists_url+'">'+people[i].gists_url+'</a></li></p>' +
+                   '<p><li>Repos: <a href="'+people[i].repos_url +'" target="_blank">'+people[i].repos_url +'</a></li></p>'+
+                   '<p><li>URL: <a href="'+people[i].url+'" target="_blank">'+people[i].url+'</a></li></p>' +
+                   '<p><li>Gits: <a href="'+people[i].gists_url+'" target="_blank">'+people[i].gists_url+'</a></li></p>' +
                    '</ul></div>' +
                    '</div>';
                    document.getElementById('showme').innerHTML = display;
@@ -123,5 +166,9 @@
             req.send();
         }
     </script>
+    <footer>
+   <hr>
+   <code>Copyright (c) 2020 Samson Baidya</code>
+ </footer>
   </body>
 </html>
